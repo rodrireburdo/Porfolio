@@ -1,37 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
-import GitHubicon from '../components/icons/GitHubIcon.astro';
-import SocialPill from '../components/SocialPill.astro';
+import Layout from "../layouts/Layout.astro"
+
+import AboutMe from "../components/AboutMe.astro"
+import CodeIcon from "../components/icons/CodeIcon.astro"
+import ProfileCheck from "../components/icons/ProfileCheck.astro"
+import Projects from "../components/Projects.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
+import TitleSection from "../components/TitleSection.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hola, soy Rodri 
-			<a 
-				href="https://linkedin.com/in/rodrigo-reburdo"
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
-			</a>
-		</h1>
-		<h2 class="text-2xl opacity-80 text-wrap">
-			Terminando la Tecnicatura Universitaria en Programación, una carrera que abarca el desarrollo web en general, aunque me especializo como desarrollador junior frontend. Además de mi carrera, soy un apasionado jugador y profesor de ajedrez, me dedico a transmitir el amor por este juego a todos mis alumnos.
-		</h2>
+<Layout
+	title="Porfolio de Rodrigo Reburdo - Desarrollador y Programador"
+	description="Contrata a Rodri para crear tu aplicación web. Desarrollador Web y Creador de Contenido."
+>
+<main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+    	<Hero>
+    	</slot>
+    	</Hero>
+    	</SectionContainer>
+    <div class="space-y-24">
+    	<SectionContainer id="proyectos">
+    		<TitleSection>
+        		<CodeIcon class="size-7" />
+        		Proyectos
+    		</TitleSection>
+    		<Projects />
+    	</SectionContainer>
 
-		<nav class="flex gap-x-2">
-			<SocialPill href="https://linkedin.com/in/rodrigo-reburdo">
-				<LinkedinIcon class="w-6 h-6"/>
-				LinkedIn
-			</SocialPill>
-			<SocialPill href="https://github.com/rodrireburdo">
-				<GitHubicon class="w-6 h-6" />
-				GitHub
-			</SocialPill>
-		</nav>
-	</section>
-	</main>
+    	<SectionContainer id="sobre-mi">
+			<TitleSection>
+        	<ProfileCheck class="size-8" />
+        	Sobre mí
+			</TitleSection>
+			<AboutMe />
+    	</SectionContainer>
+	</div>
+</main>
 </Layout>
