@@ -6,6 +6,7 @@ import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
 import SocialPill from "../components/SocialPill.astro"
 import GitHubIcon from './icons/GitHubIcon.astro';
 import WhatsAppIcon from './icons/WhatsAppIcon.astro';
+import DownloadIcon from './icons/DownloadIcon.astro';
 ---
 
 <div class="max-w-xl">
@@ -35,10 +36,6 @@ import WhatsAppIcon from './icons/WhatsAppIcon.astro';
         También utilizo herramientas como Git, GitHub, Docker, Postman y Linux, lo que garantiza soluciones eficientes y escalables.
     </p>
     <nav class="flex flex-wrap gap-4 mt-8">
-        <SocialPill href="mailto:rodri.reburdo01@gmail.com">
-            <MailIcon class="size-4" />
-            Contáctame
-        </SocialPill>
         <SocialPill href="https://linkedin.com/in/rodrigo-reburdo">
             <LinkedinIcon class="size-4" />
             LinkedIn
@@ -50,6 +47,10 @@ import WhatsAppIcon from './icons/WhatsAppIcon.astro';
         <SocialPill href="https://wa.me/543562418722">
             <WhatsAppIcon class="size-4 hover:text-white" />
                 WhatsApp
+        </SocialPill>
+        <SocialPill href="./Reburdo Rodrigo CV.pdf" download="RodrigoReburdoCV">
+            <DownloadIcon class="size-4 hover:text-white" />
+            Descargar CV
         </SocialPill>
     </nav>
 </div>
